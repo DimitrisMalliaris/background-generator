@@ -5,7 +5,7 @@ const body = document.getElementById("gradient");
 const button = document.querySelector("button");
 const container = document.querySelector(".colors");
 const random = document.querySelector(".random");
-const numOfColors = 2;
+var numOfColors = 2;
 
 
 colors[0].addEventListener("input", setGradient)
