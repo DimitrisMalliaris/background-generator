@@ -1,11 +1,11 @@
-var css = document.querySelector(".css");
-var colors = document.querySelectorAll(".color");
-var degree = document.querySelector(".degree");
-var body = document.getElementById("gradient");
-var button = document.querySelector("button");
-var container = document.querySelector(".colors");
-var random = document.querySelector(".random");
-var numOfColors = 2;
+const css = document.querySelector(".css");
+const colors = document.querySelectorAll(".color");
+const degree = document.querySelector(".degree");
+const body = document.getElementById("gradient");
+const button = document.querySelector("button");
+const container = document.querySelector(".colors");
+const random = document.querySelector(".random");
+const numOfColors = 2;
 
 
 colors[0].addEventListener("input", setGradient)
@@ -15,7 +15,7 @@ degree.addEventListener("input", setGradient)
 button.addEventListener("click", function(){
 	numOfColors++;
 
-	var label = document.createElement("label");
+	let label = document.createElement("label");
 	label.setAttribute("for", "color" + numOfColors);
 	label.textContent = "Color " 
 	+ numOfColors 
@@ -25,7 +25,7 @@ button.addEventListener("click", function(){
 	}
 	container.appendChild(label);
 
-	var newColor =  document.createElement("input");
+	let newColor =  document.createElement("input");
 	newColor.setAttribute("type", "color");
 	newColor.setAttribute("name", "color" + numOfColors);
 	newColor.setAttribute("class", "color");
@@ -54,7 +54,7 @@ function setGradient(){
 	if( degree.value === undefined || degree.value === "") { 
 		degree.value = 0; 
 	}
-	var backgroundStyle = "linear-gradient("
+	let backgroundStyle = "linear-gradient("
 	+ degree.value 
 	+"deg, "  
 
