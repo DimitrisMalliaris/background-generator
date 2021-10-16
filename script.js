@@ -1,5 +1,5 @@
 const css = document.querySelector(".css");
-const colors = document.querySelectorAll(".color");
+var colors = document.querySelectorAll(".color");
 const degree = document.querySelector(".degree");
 const body = document.getElementById("gradient");
 const button = document.querySelector("button");
